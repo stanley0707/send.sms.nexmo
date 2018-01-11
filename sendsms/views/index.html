@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Stas Shilow IT Production"/>
+    <link rel="shortcut icon" href="favicon.ico">
+	<title>В Питере - Петь</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h2>отправить сообщение</h2>
+        <input type="tel" name"number" id="number" placeholder="введите номер..."></input>
+        <input type="text" name"msg" id="msg" placeholder="ваше сообщение"></input>
+        <input type="button" id="button" value="отправить" class="button button-primary"></input>
+        <p class="response"></p>
+    </div>
+<script  src="/socket.io/socket.io.js"></script>
+<script  src="js/main.js"></script>
+</body>
+    
+</html>
