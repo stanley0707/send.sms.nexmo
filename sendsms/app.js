@@ -6,8 +6,8 @@ const socketio = require('socket.io')
 
 // api nexmo init 
 const nexmo = new Nexmo({
-    apiKey:'546ff10d',
-    apiSecret:'d27519e401afeb8c'
+    apiKey:'yorkey',
+    apiSecret:'yourSecretApi'
 }, {debug: true});
 
 // init app
@@ -17,7 +17,7 @@ const app = express();
 app.set('view engine', 'html');
 app.engine('html',ejs.renderFile);
 
-// public folder setup 
+// директория 
 app.use(express.static(__dirname +'/public'));
 
 // парсер 
@@ -39,7 +39,7 @@ app.post('/', (req, res) => {
    const text = req.body.text;
    
    nexmo.message.sendSms(
-    '79819534340', number, text, { type:'unicode' },
+    'phone', number, text, { type:'unicode' },
    (err, responseData) => {
        if(err){
           console.log(err);      
